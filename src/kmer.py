@@ -2,15 +2,28 @@
 
 
 def kmer(x: str, k: int) -> list[str]:
+    kmers = []
+    for i in range(0,len(x)-k+1):
+        kmers.append(x[i:i+k])
+          
+    return kmers
+
+
+
+
     """
-    Computer all k-mers of x.
+        Computer all k-mers of x.
 
     >>> kmer('agtagtcg', 3)
     ['agt', 'gta', 'tag', 'agt', 'gtc', 'tcg']
 
     FIXME: do you want more tests here?
     """
-    ...
+
+
+
+print (kmer('agtagtcg', 3))
+
 
 
 def unique_kmers(x: str, k: int) -> list[str]:
